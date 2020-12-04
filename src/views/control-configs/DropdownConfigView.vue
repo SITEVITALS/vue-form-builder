@@ -9,8 +9,7 @@
 
         <div :class="styles.FORM.FORM_GROUP">
             <label>Option-Data-List Mode</label>
-            <select :class="styles.FORM.FORM_CONTROL"
-                    v-model="control.dataMode">
+            <select :class="styles.FORM.FORM_CONTROL" v-model="control.dataMode">
 
                 <option v-for="item in listDataModes"
                         :key="item.val"
@@ -83,17 +82,21 @@
                 </div>
 
                 <div :class="styles.FORM.FORM_GROUP">
-                    <label>Item Value</label>
                     <input type="text" :class="styles.FORM.FORM_CONTROL"
-                           placeholder="Radio-Value"
+                           placeholder="Item Value"
                            v-model="listItem.value">
                 </div>
 
                 <div :class="styles.FORM.FORM_GROUP">
-                    <label>Label Text</label>
                     <input type="text" :class="styles.FORM.FORM_CONTROL"
-                           placeholder="Label text"
+                           placeholder="Label Text"
                            v-model="listItem.text">
+                </div>
+
+                <div :class="styles.FORM.FORM_GROUP">
+                    <input type="text" :class="styles.FORM.FORM_CONTROL"
+                           placeholder="Next Section"
+                           v-model="listItem.next_section">
                 </div>
             </div>
 
