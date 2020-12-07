@@ -94,9 +94,15 @@
                 </div>
 
                 <div :class="styles.FORM.FORM_GROUP">
-                    <input type="text" :class="styles.FORM.FORM_CONTROL"
+
+                  <select :class="styles.FORM.FORM_CONTROL" v-model="listItem.next_section">
+                    <option v-for="section in formSections" :key="section.uniqueId">{{ section.headline }}</option>
+                  </select>
+
+                    <!-- <input type="text" :class="styles.FORM.FORM_CONTROL"
                            placeholder="Child Section"
-                           v-model="listItem.next_section">
+                           v-model="listItem.next_section"> -->
+                  <!-- {{ formSections }} -->
                 </div>
             </div>
 
@@ -136,6 +142,33 @@
              * Dropdown Data Modes List
              */
             listDataModes: () => DROPDOWN_DATA_MODES,
+
+            formSections() {
+              if (this.formData) {
+                let keys = Object.keys(this.formData.sections)
+                let sections = [];
+                keys.forEach(key => {
+                  // console.log(keys)
+                  sections.push(this.formData.sections[key])
+
+                });
+
+                return sections;
+
+              }
+
+              return []
+
+
+              // return sections;
+              // return keys;
+
+            }
+
+        },
+        mounted() {
+          // let keys = Object.keys(this.formData.sections)
+          // console.log(keys)
         }
     }
 </script>
