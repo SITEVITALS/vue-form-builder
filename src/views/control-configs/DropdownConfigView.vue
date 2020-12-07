@@ -96,13 +96,10 @@
                 <div :class="styles.FORM.FORM_GROUP">
 
                   <select :class="styles.FORM.FORM_CONTROL" v-model="listItem.next_section">
+                      <option selected disabled>Select Section</option>
                     <option v-for="section in formSections" :key="section.uniqueId">{{ section.headline }}</option>
                   </select>
 
-                    <!-- <input type="text" :class="styles.FORM.FORM_CONTROL"
-                           placeholder="Child Section"
-                           v-model="listItem.next_section"> -->
-                  <!-- {{ formSections }} -->
                 </div>
             </div>
 
