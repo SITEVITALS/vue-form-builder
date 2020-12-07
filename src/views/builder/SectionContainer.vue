@@ -1,5 +1,5 @@
 <template>
-    <div class="section-container" :class="{'active': isDoingConfiguration}" ref="section.headline" :id="section.headline">
+    <div class="section-container" :class="{'active': isDoingConfiguration}" ref="asd" :id="section.healine">
         <SectionNavigationBar :section="section"
                               @active="setActive" />
 

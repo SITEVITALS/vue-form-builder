@@ -1,6 +1,5 @@
 <template>
     <div class="section-container">
-asd
         <component :is="sectionViewComponent"
                    :section="section"
                    :rows="rows"
@@ -8,6 +7,7 @@ asd
                    :key="section.uniqueId"
                    :value-container="valueContainer"
                    :validation-errors="validationErrors"
+                   :ref="section.healine" :id="section.healine"
         />
 
     </div>
