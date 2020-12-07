@@ -95,7 +95,7 @@
 
                 <div :class="styles.FORM.FORM_GROUP">
                     <input type="text" :class="styles.FORM.FORM_CONTROL"
-                           placeholder="Next Section"
+                           placeholder="Child Section"
                            v-model="listItem.next_section">
                 </div>
             </div>
