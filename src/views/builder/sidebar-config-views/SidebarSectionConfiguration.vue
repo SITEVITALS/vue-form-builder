@@ -37,13 +37,6 @@
             </label>
         </div>
 
-        <div :class="styles.FORM.FORM_GROUP">
-            <label>Enter Unique ID</label>
-            <input type="text"
-                   :class="styles.FORM.FORM_CONTROL"
-                   v-model="sectionConfiguration.identification">
-        </div>
-
         <div class="buttons">
             <button :class="styles.BUTTON.PRIMARY" @click="save(false)">
                 Save

@@ -97,7 +97,7 @@
 
                   <select :class="styles.FORM.FORM_CONTROL" v-model="listItem.next_section">
                     <option value="">Select Section</option>
-                    <option v-for="section in formSections" :key="section.uniqueId" :value="section.identification || section.headline">{{ section.headline }}</option>
+                    <option v-for="section in formSections" :key="section.uniqueId" :value="section.uniqueId">{{ section.headline }}</option>
                   </select>
 
                 </div>

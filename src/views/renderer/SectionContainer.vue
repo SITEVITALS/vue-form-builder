@@ -7,7 +7,7 @@
                    :key="section.uniqueId"
                    :value-container="valueContainer"
                    :validation-errors="validationErrors"
-                   :ref="section.identification" :id="section.identification"
+                   :ref="section.uniqueId" :id="section.uniqueId"
         />
 
     </div>
