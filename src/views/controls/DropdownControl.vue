@@ -49,7 +49,7 @@
         watch: {
             test(val) {
                 let option = this.listOptions.find(element => element.value == val)
-                console.log(option)
+                // console.log(option)
                 this.dummyValueContainer[this.control.uniqueId] = option;
             },
             control: {
