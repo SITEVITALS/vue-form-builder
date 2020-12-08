@@ -14,7 +14,8 @@ const MODEL = {
         props: "value"
     },
     data: () => ({
-        valueContainer: null
+        valueContainer: null,
+        dummyValueContainer: {},
     }),
     watch: {
         value: {

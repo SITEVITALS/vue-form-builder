@@ -21853,7 +21853,8 @@ var MODEL = {
   },
   data: function data() {
     return {
-      valueContainer: null
+      valueContainer: null,
+      dummyValueContainer: {}
     };
   },
   watch: {
