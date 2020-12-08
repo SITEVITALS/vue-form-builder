@@ -6,6 +6,7 @@ export default class ListItem {
     text = ""
 
     constructor(value, text) {
+        this.next_section = ''
         this.value = value
         this.text = text
     }

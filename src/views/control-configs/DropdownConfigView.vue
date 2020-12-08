@@ -96,6 +96,7 @@
                 <div :class="styles.FORM.FORM_GROUP">
 
                   <select :class="styles.FORM.FORM_CONTROL" v-model="listItem.next_section">
+                    <option value="">Not Applicable</option>
                     <option v-for="section in formSections" :key="section.uniqueId">{{ section.headline }}</option>
                   </select>
 
@@ -125,7 +126,7 @@
              */
             addListItem() {
                 this.control.items.push(
-                    new ListItem('', '')
+                    new ListItem('', '', '')
                 )
             },
 
