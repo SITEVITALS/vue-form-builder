@@ -21,6 +21,7 @@
                               :controls="formData.controls"
                               :key="sectionData.uniqueId"
                               :value-container="valueContainer"
+                              :dummy-value-container="dummyValueContainer"
                               :validation-errors="validationErrors"
             />
         </form>
@@ -39,6 +40,7 @@
                               :controls="formData.controls"
                               :key="sectionData.uniqueId"
                               :value-container="valueContainer"
+                              :dummy-value-container="dummyValueContainer"
                               :validation-errors="validationErrors"
             />
 

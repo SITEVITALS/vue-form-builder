@@ -4,6 +4,7 @@
             :name="control.name || control.uniqueId"
             @input="updateValue($event.target.value)"
             :multiple="this.control.multiple"
+            v-model="test"
     >
         <!-- placeholder -->
         <option disabled
@@ -36,15 +37,21 @@
      */
     export default {
         name: "DropdownControl",
+        props: ['dummyValueContainer'],
         mixins: [CONTROL_FIELD_EXTEND_MIXIN],
         data: () => ({
             listOptions: [],
-
+            test: '',
             dataMode: "",
             apiURL: "",
         }),
 
         watch: {
+            test(val) {
+                let option = this.listOptions.find(element => element.value == val)
+                console.log(option)
+                this.dummyValueContainer[this.control.uniqueId] = option;
+            },
             control: {
                 deep: true,
                 handler(controlObj) {
