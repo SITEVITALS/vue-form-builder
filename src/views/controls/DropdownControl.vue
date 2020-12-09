@@ -4,6 +4,7 @@
             :name="control.name || control.uniqueId"
             @input="updateValue($event.target.value)"
             :multiple="this.control.multiple"
+             v-model="dummyData"
     >
         <!-- placeholder -->
         <option disabled
@@ -39,12 +40,17 @@
         mixins: [CONTROL_FIELD_EXTEND_MIXIN],
         data: () => ({
             listOptions: [],
-
+            dummyData: null,
             dataMode: "",
             apiURL: "",
+            dropdownOption: {}
         }),
-
         watch: {
+            dummyData(val) {
+                let option = this.listOptions.find(element => element.value == val)
+                localStorage.setItem(this.control.uniqueId, JSON.stringify(option));
+                // this.dropdownOption[this.control.uniqueId] = option;
+            },
             control: {
                 deep: true,
                 handler(controlObj) {
