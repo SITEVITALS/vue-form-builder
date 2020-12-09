@@ -6,7 +6,6 @@
                    :controls="controls"
                    :key="section.uniqueId"
                    :value-container="valueContainer"
-                   :dummy-value-container="dummyValueContainer"
                    :validation-errors="validationErrors"
                    :ref="section.uniqueId" :id="section.uniqueId"
         />
@@ -26,7 +25,6 @@
             rows: Object,
             controls: Object,
             valueContainer: Object,
-            dummyValueContainer: Object,
             validationErrors: Object,
         },
 

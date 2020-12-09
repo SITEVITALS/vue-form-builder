@@ -8,7 +8,6 @@
             <component :is="controlComponent"
                        :control="control"
                        :value-container="valueContainer"
-                       :dummy-value-container="dummyValueContainer"
                        v-model="valueContainer[controlName]"
                        :class="validationErrorClasses"
             />
@@ -46,10 +45,6 @@
             valueContainer: {
                 type: Object,
                 required: true
-            },
-            dummyValueContainer: {
-                type: Object,
-                required: false
             },
             validationErrors: {
                 type: Object,

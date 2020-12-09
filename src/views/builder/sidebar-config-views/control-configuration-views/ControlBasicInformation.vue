@@ -5,10 +5,10 @@
             <input type="text" :class="styles.FORM.FORM_CONTROL" :value="control.uniqueId" readonly>
         </div>
 
-        <!-- <div :class="styles.FORM.FORM_GROUP">
+        <div :class="styles.FORM.FORM_GROUP">
             <label>Name (Must be unique)</label>
             <input type="text" :class="styles.FORM.FORM_CONTROL" v-model="control.name">
-        </div> -->
+        </div>
 
         <div :class="styles.FORM.FORM_GROUP">
             <label>Label</label>

@@ -45,7 +45,6 @@ const MODEL = {
          */
         createValueContainer() {
             let containerObj = {}
-            let dummyContainerObj = {}
             const controlIds = Object.keys(this.formData.controls)
 
             controlIds.forEach(controlId => {
@@ -68,15 +67,12 @@ const MODEL = {
 
                 // add new empty field value
                 containerObj[name] = ""
-                dummyContainerObj[name] = {value: '', next_section: ''}
 
                 // if the control has default factory creation closure, run it
                 if (typeof CONTROLS[controlItem.type].rendererDefaultData === 'function') {
                     containerObj[name] = CONTROLS[controlItem.type].rendererDefaultData(controlItem)
-                    dummyContainerObj[name] = CONTROLS[controlItem.type].rendererDefaultData(controlItem)
                 }
             });
-            // console.log(controlIds)
 
             // emit to the parent for the value detail
             if (this.value) {
@@ -85,7 +81,6 @@ const MODEL = {
 
             // set to the real handler
             this.valueContainer = containerObj
-            this.dummyValueContainer = dummyContainerObj
         }
     },
 
