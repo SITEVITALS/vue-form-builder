@@ -13,6 +13,7 @@ const RENDERER_SECTION_VIEW_MIXIN = {
         rows: Object,
         controls: Object,
         valueContainer: Object,
+        dummyValueContainer: Object,
         validationErrors: Object,
     },
 
