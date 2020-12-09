@@ -45,10 +45,10 @@
             dropdownOption: {}
         }),
         watch: {
-            dummyData(val) {
+            value (val) {
                 let option = this.listOptions.find(element => element.value == val)
                 localStorage.setItem(this.control.uniqueId, JSON.stringify(option));
-                // this.dropdownOption[this.control.uniqueId] = option;
+                console.log(localStorage.getItem(this.control.uniqueId))
             },
             control: {
                 deep: true,
