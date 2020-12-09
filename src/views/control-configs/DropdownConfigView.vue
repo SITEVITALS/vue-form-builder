@@ -93,7 +93,7 @@
                            v-model="listItem.text">
                 </div>
 
-                <div :class="styles.FORM.FORM_GROUP">
+                <div :class="styles.FORM.FORM_GROUP" v-if="dropdown">
 
                   <select :class="styles.FORM.FORM_CONTROL" v-model="listItem.next_section">
                     <option value="">Select Section</option>
@@ -115,7 +115,9 @@
     export default {
         name: "DropdownConfigView",
         mixins: [CONTROL_SPECIAL_CONFIG_MIXIN],
-
+        data: () => ({
+            dropdown: true
+        }),
         methods: {
             /**
              * Add new List-Item for the Current Radio/Checkbox
@@ -145,21 +147,23 @@
                 let keys = Object.keys(this.formData.sections)
                 let sections = [];
                 keys.forEach(key => {
-                  // console.log(keys)
-                  sections.push(this.formData.sections[key])
 
+                  let exist = this.formData.sections[key].controls.find(element => element == this.control.uniqueId)
+                  if (exist) {
+
+                    Object.entries(this.formData.controls).forEach(([k, v]) => {
+                      if (v.type == 'dropDown') {
+                        if (v.items.find(element => element.next_section == key)) {
+                          this.dropdown = false
+                        }
+                      }
+                    })
+                  }
+                    sections.push(this.formData.sections[key])
                 });
-
                 return sections;
-
               }
-
               return []
-
-
-              // return sections;
-              // return keys;
-
             }
 
         },
