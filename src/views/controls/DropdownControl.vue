@@ -4,7 +4,6 @@
             :name="control.name || control.uniqueId"
             @input="updateValue($event.target.value)"
             :multiple="this.control.multiple"
-             v-model="dummyData"
     >
         <!-- placeholder -->
         <option disabled
