@@ -21902,6 +21902,7 @@ var MODEL = {
       var _this = this;
 
       var containerObj = {};
+      var dummyContainerObj = {};
       var controlIds = Object.keys(this.formData.controls);
       controlIds.forEach(function (controlId) {
         var controlItem = _this.formData.controls[controlId]; // if disableValue is provided, we don't need to solve more for the control
@@ -21919,12 +21920,15 @@ var MODEL = {
         } // add new empty field value
 
 
-        containerObj[name] = ""; // if the control has default factory creation closure, run it
+        containerObj[name] = "";
+        dummyContainerObj[name] = ""; // if the control has default factory creation closure, run it
 
         if (typeof configs_controls["a" /* CONTROLS */][controlItem.type].rendererDefaultData === 'function') {
           containerObj[name] = configs_controls["a" /* CONTROLS */][controlItem.type].rendererDefaultData(controlItem);
+          dummyContainerObj[name] = configs_controls["a" /* CONTROLS */][controlItem.type].rendererDefaultData(controlItem);
         }
-      }); // emit to the parent for the value detail
+      }); // console.log(controlIds)
+      // emit to the parent for the value detail
 
       if (this.value) {
         this.$emit(EMIT_EVENT, containerObj);
@@ -21932,6 +21936,7 @@ var MODEL = {
 
 
       this.valueContainer = containerObj;
+      this.dummyValueContainer = dummyContainerObj;
     }
   },
   created: function created() {
