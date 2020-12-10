@@ -1,5 +1,5 @@
 <template>
-    <SidebarToggleableContainer headline="Styling/Classes">
+<!--     <SidebarToggleableContainer headline="Styling/Classes">
         <div :class="styles.FORM.FORM_GROUP">
             <label>Container Size Class</label>
             <select :class="styles.FORM.FORM_CONTROL" v-model="control.containerClass">
@@ -25,7 +25,7 @@
             <label>Control-Label Additional Classes</label>
             <input type="text" :class="styles.FORM.FORM_CONTROL" v-model="control.additionalLabelClass">
         </div>
-    </SidebarToggleableContainer>
+    </SidebarToggleableContainer> -->
 </template>
 
 <script>

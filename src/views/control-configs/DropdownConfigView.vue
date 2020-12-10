@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div :class="styles.FORM.FORM_GROUP">
+        <!-- <div :class="styles.FORM.FORM_GROUP">
             <label>
                 Multiple Selection?
                 <input type="checkbox" v-model="control.multiple">
@@ -57,7 +57,7 @@
                        :class="styles.FORM.FORM_CONTROL"
                        v-model="control.apiTextKey">
             </div>
-        </div>
+        </div> -->
 
 
         <div :class="styles.FORM.FORM_GROUP"

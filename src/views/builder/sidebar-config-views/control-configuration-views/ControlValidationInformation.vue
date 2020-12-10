@@ -1,5 +1,5 @@
 <template>
-    <SidebarToggleableContainer headline="Validation">
+    <!-- <SidebarToggleableContainer headline="Validation">
 
         <label>
             Validation Rules
@@ -64,7 +64,7 @@
             </div>
         </div>
 
-    </SidebarToggleableContainer>
+    </SidebarToggleableContainer> -->
 </template>
 
 <script>
