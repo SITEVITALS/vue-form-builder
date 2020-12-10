@@ -6,12 +6,7 @@
             :multiple="this.control.multiple"
     >
         <!-- placeholder -->
-        <option disabled
-                selected
-                v-text="control.placeholderText"
-                v-if="control.placeholderText"
-        ></option>
-
+        <option value="">{{ control.placeholderText || 'Please Select' }}</option>
         <!-- list rendering -->
         <option v-for="optionObj in listOptions"
                 :key="optionObj.value"
