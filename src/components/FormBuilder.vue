@@ -75,7 +75,7 @@
             }
         },
         mounted() {
-            console.log('form-builder')
+            // console.log('form-builder')
         }
     };
 </script>
