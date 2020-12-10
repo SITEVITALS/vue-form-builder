@@ -73,6 +73,9 @@
             copyrightText() {
                 return MAIN_CONSTANTS.COPYRIGHT
             }
+        },
+        mounted() {
+            console.log('form-builder')
         }
-    }
+    };
 </script>
