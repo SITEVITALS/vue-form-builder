@@ -96,7 +96,7 @@
                 <div :class="styles.FORM.FORM_GROUP" v-if="dropdown">
 
                   <select :class="styles.FORM.FORM_CONTROL" v-model="listItem.next_section">
-                    <option value="">{{ control.placeholderText || 'Please Select' }}</option>
+                    <option value="">Please Select</option>
                     <option v-for="section in formSections" :key="section.uniqueId" :value="section.uniqueId">{{ section.headline }}</option>
                   </select>
 
