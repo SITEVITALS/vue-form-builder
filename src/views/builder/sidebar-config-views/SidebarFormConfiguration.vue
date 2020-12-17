@@ -1,15 +1,15 @@
 <template>
     <div class="sidebar-form-configuration">
-        <h5>Main Form Configuration</h5>
+        <!-- <h5>Main Form Configuration</h5> -->
 
         <div :class="styles.FORM.FORM_GROUP">
-            <label>Form Headline</label>
+            <label>Form Title</label>
             <input type="text"
                    :class="styles.FORM.FORM_CONTROL"
                    v-model="formConfiguration.headline">
         </div>
 
-        <div :class="styles.FORM.FORM_GROUP">
+        <!-- <div :class="styles.FORM.FORM_GROUP">
             <label>Form Sub-Headline</label>
             <input type="text"
                    :class="styles.FORM.FORM_CONTROL"
@@ -28,9 +28,9 @@
                 Wrapper &#x3C;form&#x3E; outside of the Form?
                 <input type="checkbox" v-model="formConfiguration.renderFormTag">
             </label>
-        </div>
+        </div> -->
 
-        <div v-show="formConfiguration.renderFormTag">
+        <!-- <div v-show="formConfiguration.renderFormTag">
 
             <div :class="styles.FORM.FORM_GROUP">
                 <label>Form-TAG Action URL</label>
@@ -46,13 +46,13 @@
                        v-model="formConfiguration.formMethod">
             </div>
 
-        </div>
+        </div> -->
 
         <div class="buttons">
-            <button :class="styles.BUTTON.PRIMARY" @click="save(false)">
+            <!-- <button :class="styles.BUTTON.PRIMARY" @click="save(false)">
                 Save
             </button>
-            <button :class="styles.BUTTON.INFO" @click="save(true)">
+ -->            <button :class="styles.BUTTON.INFO" @click="save(true)">
                 Save & Close
             </button>
         </div>
