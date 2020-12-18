@@ -18,14 +18,8 @@
         <!-- <div :class="styles.FORM.FORM_GROUP">
             <label>Sub-label</label>
             <input type="text" :class="styles.FORM.FORM_CONTROL" v-model="control.subLabel">
-        </div>
-
-        <div :class="styles.FORM.FORM_GROUP">
-            <label>
-                Show Label?
-                <input type="checkbox" v-model="control.isShowLabel">
-            </label>
         </div> -->
+
 
         <div :class="styles.FORM.FORM_GROUP">
             <label>Default Value (Optional)</label>
@@ -35,6 +29,13 @@
         <div :class="styles.FORM.FORM_GROUP">
             <label>Field Placeholder (Optional)</label>
             <input type="text" :class="styles.FORM.FORM_CONTROL" v-model="control.placeholderText">
+        </div>
+        
+        <div :class="styles.FORM.FORM_GROUP">
+            <label>
+                Show Title?
+                <input type="checkbox" v-model="control.isShowLabel">
+            </label>
         </div>
 
 
