@@ -30,7 +30,7 @@
         name: "AddSectionControl",
         mixins: [STYLE_INJECTION_MIXIN],
         data: () => ({
-            show: false,
+            show: true,
             sectionTypes: SECTION_TYPES
         }),
         methods:{
