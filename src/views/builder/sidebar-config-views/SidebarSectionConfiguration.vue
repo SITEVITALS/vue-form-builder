@@ -1,46 +1,51 @@
 <template>
     <div class="sidebar-form-configuration">
-        <h5>Section Configuration</h5>
+        <!-- <h5>Section Configuration</h5> -->
 
         <div :class="styles.FORM.FORM_GROUP">
-            <label>Headline</label>
+            <label>Section Title</label>
             <input type="text"
                    :class="styles.FORM.FORM_CONTROL"
                    v-model="sectionConfiguration.headline">
         </div>
 
-        <div :class="styles.FORM.FORM_GROUP">
-            <label>Headline Additional Class (CSS)</label>
-            <input type="text"
-                   :class="styles.FORM.FORM_CONTROL"
-                   v-model="sectionConfiguration.headlineAdditionalClass">
+        <div class="for-admin">
+
+            <div :class="styles.FORM.FORM_GROUP">
+                <label>Headline Additional Class (CSS)</label>
+                <input type="text"
+                       :class="styles.FORM.FORM_CONTROL"
+                       v-model="sectionConfiguration.headlineAdditionalClass">
+            </div>
+
+            <div :class="styles.FORM.FORM_GROUP">
+                <label>Sub-Headline</label>
+                <input type="text"
+                       :class="styles.FORM.FORM_CONTROL"
+                       v-model="sectionConfiguration.subHeadline">
+            </div>
+
+            <div :class="styles.FORM.FORM_GROUP">
+                <label>Sub-Headline Additional Class (CSS)</label>
+                <input type="text"
+                       :class="styles.FORM.FORM_CONTROL"
+                       v-model="sectionConfiguration.subHeadlineAdditionalClass">
+            </div>
+
+            <div :class="styles.FORM.FORM_GROUP">
+                <label>
+                    Show Section Headline?
+                    <input type="checkbox" v-model="sectionConfiguration.isShowHeadline">
+                </label>
+            </div>
+            
         </div>
 
-        <div :class="styles.FORM.FORM_GROUP">
-            <label>Sub-Headline</label>
-            <input type="text"
-                   :class="styles.FORM.FORM_CONTROL"
-                   v-model="sectionConfiguration.subHeadline">
-        </div>
-
-        <div :class="styles.FORM.FORM_GROUP">
-            <label>Sub-Headline Additional Class (CSS)</label>
-            <input type="text"
-                   :class="styles.FORM.FORM_CONTROL"
-                   v-model="sectionConfiguration.subHeadlineAdditionalClass">
-        </div>
-
-        <div :class="styles.FORM.FORM_GROUP">
-            <label>
-                Show Section Headline?
-                <input type="checkbox" v-model="sectionConfiguration.isShowHeadline">
-            </label>
-        </div>
 
         <div class="buttons">
-            <button :class="styles.BUTTON.PRIMARY" @click="save(false)">
+            <!-- <button :class="styles.BUTTON.PRIMARY" @click="save(false)">
                 Save
-            </button>
+            </button> -->
             <button :class="styles.BUTTON.INFO" @click="save(true)">
                 Save & Close
             </button>
