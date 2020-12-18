@@ -10,8 +10,6 @@
             <input type="text" :class="styles.FORM.FORM_CONTROL" v-model="control.name">
         </div> -->
 
-        <br><br>
-
         <div :class="styles.FORM.FORM_GROUP">
             <label>Input Title</label>
             <input type="text" :class="styles.FORM.FORM_CONTROL" v-model="control.label">

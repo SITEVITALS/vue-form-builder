@@ -903,8 +903,10 @@ html.md-theme-default .vue-form-builder .section-container {
 .open>.md-button.md-info.dropdown-toggle,
 .open>.md-button.md-info.dropdown-toggle:focus,
 .open>.md-button.md-info.dropdown-toggle:hover {
-    background-color: #00bcd4 !important;
-    color: #fff !important;
+    background-color: #00bcd4;
+    color: #fff;
+    /*background-color: #00bcd4 !important;
+    color: #fff !important;*/
 }
 
 .md-button.md-secondary,
