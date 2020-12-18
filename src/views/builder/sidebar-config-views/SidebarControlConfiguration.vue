@@ -1,6 +1,6 @@
 <template>
     <div class="sidebar-form-configuration">
-        <h5>Control Configuration</h5>
+        <h5>Input Configuration</h5>
 
         <!-- Basic of the control/Same for all -->
         <ControlBasicInformation :control="control" />
@@ -21,9 +21,9 @@
         <ControlValidationInformation :control="control" />
 
         <div class="buttons">
-            <button :class="styles.BUTTON.PRIMARY" @click="save(false)">
+            <!-- <button :class="styles.BUTTON.PRIMARY" @click="save(false)">
                 Save
-            </button>
+            </button> -->
             <button :class="styles.BUTTON.INFO" @click="save(true)">
                 Save & Close
             </button>

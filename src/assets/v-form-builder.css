@@ -293,9 +293,9 @@
 
 .vue-form-builder .list-selection {
     position: relative;
-    padding-top: 15px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #000;
+    padding-top: 20px;
+    margin-bottom: 40px;
+    border-bottom: 0px;
 }
 
 .vue-form-builder .list-selection .tool-block {

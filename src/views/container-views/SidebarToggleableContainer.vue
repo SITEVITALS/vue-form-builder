@@ -1,20 +1,17 @@
 <template>
     <div class="toggleable-section">
-        <div class="headline-block">
+        <!-- <div class="headline-block">
             <h5>
-                <!-- chevron icon to show/hide -->
                 <span class="toggle-item"
                       v-html="isVisible ? iconClose : iconOpen"
                       @click="isVisible = !isVisible">
                 </span>
 
-                <!-- headline -->
                 <span v-text="headline"></span>
 
-                <!-- subheadline -->
                 <small class="toggleable-sub-headline" v-text="subHeadline"></small>
             </h5>
-        </div>
+        </div> -->
 
         <transition name="slide">
             <div v-show="isVisible">

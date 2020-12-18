@@ -56,8 +56,8 @@
         <div class="buttons">
             <!-- <button :class="styles.BUTTON.PRIMARY" @click="save(false)">
                 Save
-            </button>
- -->            <button :class="styles.BUTTON.INFO" @click="save(true)">
+            </button> -->
+            <button :class="styles.BUTTON.INFO" @click="save(true)">
                 Save & Close
             </button>
         </div>

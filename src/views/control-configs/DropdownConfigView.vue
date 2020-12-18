@@ -64,12 +64,14 @@
              v-show="this.control.dataMode === listDataModes.list.val">
 
             <label>
-                List Options
-                <span class="pointer"
+                Options
+                <span class="pointer" style="margin-left: 5px; color: #006cd0; text-decoration: underline;" @click="addListItem">Add Option</span>
+                <!-- <span class="pointer"
                       @click="addListItem"
                       v-html="$form.getIcon('addOutline', '16px', '16px', 'green')">
-                </span>
+                </span> -->
             </label>
+            <br>
 
             <!-- Im using div instead of table. Table too small :( -->
             <div :class="['list-selection']" v-for="(listItem, iItem) in control.items" :key="iItem">

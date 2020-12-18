@@ -2,6 +2,7 @@
     <div class="sidebar-form-configuration">
 
         <h5>Choose your Control</h5>
+        <br>
 
 
         <div :class="[styles.LIST_GROUP.CONTAINER]">
@@ -11,8 +12,9 @@
                v-for="(controlInfo, controlKey) in controlTypes"
                @click="selectedControl(controlKey)">
 
-                <p class="type-headline" v-text="controlInfo.name"></p>
-                <p class="type-desc" v-text="controlInfo.description"></p>
+                <!-- <p class="type-headline" v-text="controlInfo.name"></p>
+                <p class="type-desc" v-text="controlInfo.description"></p> -->
+                <p><span class="type-headline field-title">{{ controlInfo.name }}</span> - <span class="field-desc">{{ controlInfo.description }}</span></p>
 
             </a>
 
