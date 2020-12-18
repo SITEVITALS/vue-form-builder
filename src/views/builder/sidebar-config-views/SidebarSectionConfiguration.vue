@@ -11,30 +11,30 @@
 
         <div class="for-admin">
 
-            <div :class="styles.FORM.FORM_GROUP">
+            <!-- <div :class="styles.FORM.FORM_GROUP">
                 <label>Headline Additional Class (CSS)</label>
                 <input type="text"
                        :class="styles.FORM.FORM_CONTROL"
                        v-model="sectionConfiguration.headlineAdditionalClass">
-            </div>
+            </div> -->
 
             <div :class="styles.FORM.FORM_GROUP">
-                <label>Sub-Headline</label>
+                <label>Sub-title</label>
                 <input type="text"
                        :class="styles.FORM.FORM_CONTROL"
                        v-model="sectionConfiguration.subHeadline">
             </div>
 
-            <div :class="styles.FORM.FORM_GROUP">
+            <!-- <div :class="styles.FORM.FORM_GROUP">
                 <label>Sub-Headline Additional Class (CSS)</label>
                 <input type="text"
                        :class="styles.FORM.FORM_CONTROL"
                        v-model="sectionConfiguration.subHeadlineAdditionalClass">
-            </div>
+            </div> -->
 
             <div :class="styles.FORM.FORM_GROUP">
                 <label>
-                    Show Section Headline?
+                    Show Section title?
                     <input type="checkbox" v-model="sectionConfiguration.isShowHeadline">
                 </label>
             </div>

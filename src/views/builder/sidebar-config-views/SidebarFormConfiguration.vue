@@ -12,7 +12,7 @@
         <div class="for-admin">
             
             <div :class="styles.FORM.FORM_GROUP">
-                <label>Form Sub-Headline</label>
+                <label>Form Sub-Title</label>
                 <input type="text"
                        :class="styles.FORM.FORM_CONTROL"
                        v-model="formConfiguration.subHeadline">
@@ -20,17 +20,17 @@
 
             <div :class="styles.FORM.FORM_GROUP">
                 <label>
-                    Show Form Headline?
+                    Show Form Title?
                     <input type="checkbox" v-model="formConfiguration.isShowHeadline">
                 </label>
             </div>
 
-            <div :class="styles.FORM.FORM_GROUP">
+            <!-- <div :class="styles.FORM.FORM_GROUP">
                 <label>
                     Wrapper &#x3C;form&#x3E; outside of the Form?
                     <input type="checkbox" v-model="formConfiguration.renderFormTag">
                 </label>
-            </div>
+            </div> -->
 
             <div v-show="formConfiguration.renderFormTag">
 
