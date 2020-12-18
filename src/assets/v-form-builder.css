@@ -918,8 +918,10 @@ html.md-theme-default .vue-form-builder .section-container {
 .md-button.md-secondary:active:hover,
 .md-button.md-secondary:focus,
 .md-button.md-secondary:hover {
-    background-color: #999 !important;
-    color: #fff !important;
+    background-color: #999;
+    color: #fff;
+    /*background-color: #999 !important;
+    color: #fff !important;*/
 }
 
 .md-button.md-success,
