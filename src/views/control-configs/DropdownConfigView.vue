@@ -74,14 +74,7 @@
             <br>
 
             <!-- Im using div instead of table. Table too small :( -->
-            <div :class="['list-selection']" v-for="(listItem, iItem) in control.items" :key="iItem">
-
-                <div class="tool-block">
-                    <span class="pointer"
-                          @click="removeListItem(iItem)"
-                          v-html="$form.getIcon('close', '16px', '16px', 'red')">
-                    </span>
-                </div>
+            <div :class="['list-selection']" v-for="(listItem, iItem) in control.items" :key="iItem" >
 
                 <div :class="styles.FORM.FORM_GROUP">
                     <input type="text" :class="styles.FORM.FORM_CONTROL"
@@ -95,6 +88,13 @@
                            v-model="listItem.text">
                 </div>
 
+                <div class="tool-block">
+                    <span class="pointer"
+                          @click="removeListItem(iItem)"
+                          v-html="$form.getIcon('close', '16px', '16px', 'red')">
+                    </span>
+                </div>
+                
                 <div :class="styles.FORM.FORM_GROUP" v-if="dropdown">
 
                   <select :class="styles.FORM.FORM_CONTROL" v-model="listItem.next_section">
