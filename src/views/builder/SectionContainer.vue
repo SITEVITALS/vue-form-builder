@@ -6,7 +6,7 @@
         <component :is="sectionViewComponent"
                    :section.sync="section"
                    :rows="rows"
-                   :controls="controls"
+                   :controls.sync="controls"
                    :key="section.uniqueId" />
 
     </div>

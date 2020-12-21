@@ -23,7 +23,7 @@
 
             <ControlView v-for="controlId in section.controls"
                          :key="controlId"
-                         :control="controls[controlId]"
+                         :control.sync="controls[controlId]"
                          :parent-id="section.uniqueId" />
 
             <p v-if="!hasControl">

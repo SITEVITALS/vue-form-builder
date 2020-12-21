@@ -13,7 +13,7 @@
         <SectionContainer v-for="(sectionData) in sortedSections"
                           :section.sync="sectionData"
                           :rows="formData.rows"
-                          :controls="formData.controls"
+                          :controls.sync="formData.controls"
                           :key="sectionData.uniqueId"
         />
 
