@@ -5,7 +5,7 @@
             <!-- <p contenteditable="true" @keydown.enter.prevent>{{ section.headline }}</p> -->
 
             <div>
-                <div v-click-outside="hide" ref="section_title" v-on:keyup.13="hide" @keydown.enter.prevent :contenteditable="content" @click="toggle">{{ section.headline }}</div>
+                <span v-click-outside="hide" ref="section_title" v-on:keyup.13="hide" @keydown.enter.prevent :contenteditable="content" @click="toggle">{{ section.headline }}</span>
                 <!-- <div v-show="opened">Popup item</div> -->
             </div>
 

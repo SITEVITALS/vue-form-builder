@@ -9,9 +9,12 @@
                 </span>
 
                 <!-- headline -->
-                <span v-text="section.headline"
+                <!-- <span v-text="section.headline"
                       v-show="section.isShowHeadline">
-                </span>
+                </span> -->
+
+                <span v-click-outside="hide" ref="section_title" v-on:keyup.13="hide" @keydown.enter.prevent :contenteditable="content" @click="toggle">{{ section.headline }}</span>
+
 
                 <!-- subheadline -->
                 <!-- <small :class="[section.subHeadlineAdditionalClass, 'toggleable-sub-headline']"
@@ -56,10 +59,28 @@
     import {STYLE_INJECTION_MIXIN} from "@/mixins/style-injection-mixin";
     import AddControlControl from "@/views/builder/add-controls/AddControlControl";
     import {TOGGLEABLE_MIXIN} from "@/mixins/toggleable-mixin";
+    import ClickOutside from 'vue-click-outside'
 
     export default {
         name: "ToggleableSectionView",
         components: {AddControlControl},
         mixins: [SECTION_VIEW_MIXINS, STYLE_INJECTION_MIXIN, TOGGLEABLE_MIXIN],
+        data: () => ({
+            content: true
+        }),
+        methods: {
+            toggle () {
+                this.content = true
+            },
+            hide () {
+                this.$set(this.section, 'headline', this.$refs.section_title.innerHTML)
+                this.content = false
+                setTimeout(() => { this.content = true }, 500);
+            }
+        },
+        directives: {
+            ClickOutside
+        }
+
     }
 </script>
