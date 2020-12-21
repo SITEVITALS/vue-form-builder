@@ -18217,12 +18217,12 @@ var AddControlControlvue_type_template_id_438725ce_staticRenderFns = []
 // EXTERNAL MODULE: ./src/libraries/sidebar-renderer.class.js
 var sidebar_renderer_class = __webpack_require__("1ec8");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"94025972-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/builder/sidebar-config-views/SidebarControlSelectList.vue?vue&type=template&id=846eb0c2&scoped=true&
-var SidebarControlSelectListvue_type_template_id_846eb0c2_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"sidebar-form-configuration"},[_c('h5',[_vm._v("Choose your Control")]),_c('br'),_c('div',{class:[_vm.styles.LIST_GROUP.CONTAINER]},_vm._l((_vm.controlTypes),function(controlInfo,controlKey){return _c('a',{class:_vm.styles.LIST_GROUP.SINGLE_ITEM,attrs:{"href":"javascript:void(0)"},on:{"click":function($event){return _vm.selectedControl(controlKey)}}},[_c('p',[_c('span',{staticClass:"type-headline field-title"},[_vm._v(_vm._s(controlInfo.name))]),_vm._v(" - "),_c('span',{staticClass:"field-desc"},[_vm._v(_vm._s(controlInfo.description))])])])}),0)])}
-var SidebarControlSelectListvue_type_template_id_846eb0c2_scoped_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"94025972-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/builder/sidebar-config-views/SidebarControlSelectList.vue?vue&type=template&id=2eec4cc4&scoped=true&
+var SidebarControlSelectListvue_type_template_id_2eec4cc4_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"sidebar-form-configuration"},[_c('h5',[_vm._v("Choose your Control")]),_c('br'),_c('div',{class:[_vm.styles.LIST_GROUP.CONTAINER]},_vm._l((_vm.controlTypes),function(controlInfo,controlKey){return _c('a',{class:_vm.styles.LIST_GROUP.SINGLE_ITEM,attrs:{"href":"javascript:void(0)"},on:{"click":function($event){return _vm.selectedControl(controlKey)}}},[_c('p',[_c('span',{staticClass:"type-headline field-title"},[_vm._v(_vm._s(controlInfo.name))]),_vm._v(" - "),_c('span',{staticClass:"field-desc"},[_vm._v(_vm._s(controlInfo.description))])])])}),0),_c('div',{staticStyle:{"text-align":"right","margin-top":"10px"}},[_c('button',{class:_vm.styles.BUTTON.PRIMARY,on:{"click":function($event){return _vm.close()}}},[_vm._v(" Cancel ")])])])}
+var SidebarControlSelectListvue_type_template_id_2eec4cc4_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/views/builder/sidebar-config-views/SidebarControlSelectList.vue?vue&type=template&id=846eb0c2&scoped=true&
+// CONCATENATED MODULE: ./src/views/builder/sidebar-config-views/SidebarControlSelectList.vue?vue&type=template&id=2eec4cc4&scoped=true&
 
 // EXTERNAL MODULE: ./src/configs/controls.js + 92 modules
 var controls = __webpack_require__("8dbe");
@@ -18231,6 +18231,11 @@ var controls = __webpack_require__("8dbe");
 var sidebar_body_mixin = __webpack_require__("cbce");
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/builder/sidebar-config-views/SidebarControlSelectList.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
 //
 //
 //
@@ -18302,11 +18307,11 @@ var sidebar_body_mixin = __webpack_require__("cbce");
 
 var SidebarControlSelectList_component = Object(componentNormalizer["a" /* default */])(
   sidebar_config_views_SidebarControlSelectListvue_type_script_lang_js_,
-  SidebarControlSelectListvue_type_template_id_846eb0c2_scoped_true_render,
-  SidebarControlSelectListvue_type_template_id_846eb0c2_scoped_true_staticRenderFns,
+  SidebarControlSelectListvue_type_template_id_2eec4cc4_scoped_true_render,
+  SidebarControlSelectListvue_type_template_id_2eec4cc4_scoped_true_staticRenderFns,
   false,
   null,
-  "846eb0c2",
+  "2eec4cc4",
   null
   
 )

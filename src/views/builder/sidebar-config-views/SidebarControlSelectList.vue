@@ -19,6 +19,11 @@
             </a>
 
         </div>
+        <div style="text-align: right; margin-top: 10px;">
+            <button :class="styles.BUTTON.PRIMARY" @click="close()">
+                Cancel
+            </button>
+        </div>
 
     </div>
 </template>
