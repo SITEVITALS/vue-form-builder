@@ -11,8 +11,8 @@
         </div> -->
 
         <div :class="styles.FORM.FORM_GROUP">
-            <label>Input Title</label>
-            <input type="text" :class="styles.FORM.FORM_CONTROL" v-model="control.label">
+            <!-- <label>Input Title</label> -->
+            <input type="text" :class="styles.FORM.FORM_CONTROL" v-model="control.label" placeholder="Input Title">
         </div>
 
         <!-- <div :class="styles.FORM.FORM_GROUP">
@@ -22,21 +22,21 @@
 
 
         <div :class="styles.FORM.FORM_GROUP">
-            <label>Default Value (Optional)</label>
-            <input type="text" :class="styles.FORM.FORM_CONTROL" v-model="control.defaultValue">
+            <!-- <label>Default Value (Optional)</label> -->
+            <input type="text" :class="styles.FORM.FORM_CONTROL" v-model="control.defaultValue" placeholder="Default Value">
         </div>
         
         <div :class="styles.FORM.FORM_GROUP">
-            <label>Field Placeholder (Optional)</label>
-            <input type="text" :class="styles.FORM.FORM_CONTROL" v-model="control.placeholderText">
+            <!-- <label>Field Placeholder (Optional)</label> -->
+            <input type="text" :class="styles.FORM.FORM_CONTROL" v-model="control.placeholderText" placeholder="Default Value">
         </div>
         
-        <div :class="styles.FORM.FORM_GROUP">
+        <!-- <div :class="styles.FORM.FORM_GROUP">
             <label>
                 Show Title?
                 <input type="checkbox" v-model="control.isShowLabel">
             </label>
-        </div>
+        </div> -->
 
 
     </SidebarToggleableContainer>
