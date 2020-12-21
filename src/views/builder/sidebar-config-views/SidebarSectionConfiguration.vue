@@ -18,12 +18,12 @@
                        v-model="sectionConfiguration.headlineAdditionalClass">
             </div> -->
 
-            <div :class="styles.FORM.FORM_GROUP">
+            <!-- <div :class="styles.FORM.FORM_GROUP">
                 <label>Sub-title</label>
                 <input type="text"
                        :class="styles.FORM.FORM_CONTROL"
                        v-model="sectionConfiguration.subHeadline">
-            </div>
+            </div> -->
 
             <!-- <div :class="styles.FORM.FORM_GROUP">
                 <label>Sub-Headline Additional Class (CSS)</label>
@@ -32,12 +32,12 @@
                        v-model="sectionConfiguration.subHeadlineAdditionalClass">
             </div> -->
 
-            <div :class="styles.FORM.FORM_GROUP">
+            <!-- <div :class="styles.FORM.FORM_GROUP">
                 <label>
                     Show Section title?
                     <input type="checkbox" v-model="sectionConfiguration.isShowHeadline">
                 </label>
-            </div>
+            </div> -->
             
         </div>
 

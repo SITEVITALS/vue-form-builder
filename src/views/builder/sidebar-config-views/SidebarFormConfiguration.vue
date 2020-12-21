@@ -11,7 +11,7 @@
 
         <div class="for-admin">
             
-            <div :class="styles.FORM.FORM_GROUP">
+            <!-- <div :class="styles.FORM.FORM_GROUP">
                 <label>Form Sub-Title</label>
                 <input type="text"
                        :class="styles.FORM.FORM_CONTROL"
@@ -23,7 +23,7 @@
                     Show Form Title?
                     <input type="checkbox" v-model="formConfiguration.isShowHeadline">
                 </label>
-            </div>
+            </div> -->
 
             <!-- <div :class="styles.FORM.FORM_GROUP">
                 <label>
