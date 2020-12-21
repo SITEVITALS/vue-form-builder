@@ -32,6 +32,7 @@
     export default {
         name: "DropdownControl",
         mixins: [CONTROL_FIELD_EXTEND_MIXIN],
+        props: ['dummy-value-container'],
         data: () => ({
             listOptions: [],
             dummyData: null,
@@ -43,6 +44,7 @@
             value (val) {
                 let option = this.listOptions.find(element => element.value == val)
                 localStorage.setItem(this.control.uniqueId, JSON.stringify(option));
+                // this.$set(this.dummyValueContainer, this.control.uniqueId, val)
                 // console.log(localStorage.getItem(this.control.uniqueId))
             },
             control: {
