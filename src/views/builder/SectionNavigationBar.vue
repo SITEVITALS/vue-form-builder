@@ -11,10 +11,10 @@
                     @click="pushDown"
                     v-html="$form.getIcon('arrowDown')"></button>
 
-            <button :class="styles.BUTTON.INFO" @click="openConfiguration">
+            <!-- <button :class="styles.BUTTON.INFO" @click="openConfiguration">
                 <span v-html="$form.getIcon('cog')"></span>
                 <span>Configuration</span>
-            </button>
+            </button> -->
 
             <button :class="styles.BUTTON.DANGER" @click="deleteSection">
                 <span v-html="$form.getIcon('trash')"></span>

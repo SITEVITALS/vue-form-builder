@@ -5,7 +5,7 @@
             <!-- <p contenteditable="true" @keydown.enter.prevent>{{ section.headline }}</p> -->
 
             <div>
-                <div v-click-outside="hide" ref="section_title" v-on:keyup.13="hide" @keydown.enter.prevent contenteditable="true" @click="toggle">{{ section.headline }}</div>
+                <div v-click-outside="hide" ref="section_title" v-on:keyup.13="hide" @keydown.enter.prevent :contenteditable="content" @click="toggle">{{ section.headline }}</div>
                 <!-- <div v-show="opened">Popup item</div> -->
             </div>
 
@@ -50,21 +50,26 @@
         name: "NormalSectionView",
         mixins: [SECTION_VIEW_MIXINS],
         data: () => ({
-            opened: false
+            content: true
         }),
         methods: {
             toggle () {
-                // this.opened = true
+                // alert('toggle')
+                this.content = true
             },
             hide () {
+                // alert()
                 this.$set(this.section, 'headline', this.$refs.section_title.innerHTML)
+                this.content = false
+                setTimeout(() => { this.content = true }, 500);
+                
                 // this.section.headline = this.$refs.section_title.innerHTML
                 // this.opened = false
             }
         },
 
         mounted () {
-            this.popupItem = this.$el
+            // this.popupItem = this.$el
         },
 
         directives: {
