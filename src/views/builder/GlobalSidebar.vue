@@ -5,7 +5,6 @@
               v-html="$form.getIcon('close', '24px', '24px', '#000')">
         </span>
 
-        <!--- For dynamic purpose --->
         <component v-if="component"
                    :is="component"
                    :dataPackage="dynamicData"

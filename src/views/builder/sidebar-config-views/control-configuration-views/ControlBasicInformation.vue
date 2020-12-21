@@ -28,7 +28,7 @@
         
         <div :class="styles.FORM.FORM_GROUP">
             <!-- <label>Field Placeholder (Optional)</label> -->
-            <input type="text" :class="styles.FORM.FORM_CONTROL" v-model="control.placeholderText" placeholder="Default Value">
+            <input type="text" :class="styles.FORM.FORM_CONTROL" v-model="control.placeholderText" placeholder="Placeholder">
         </div>
         
         <!-- <div :class="styles.FORM.FORM_GROUP">

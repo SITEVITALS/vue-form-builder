@@ -57,6 +57,10 @@
             <!-- <button :class="styles.BUTTON.PRIMARY" @click="save(false)">
                 Save
             </button> -->
+            
+            <button :class="styles.BUTTON.PRIMARY" @click="close()">
+                Cancel
+            </button>
             <button :class="styles.BUTTON.INFO" @click="save(true)">
                 Save & Close
             </button>
