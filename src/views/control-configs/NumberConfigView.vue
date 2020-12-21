@@ -1,11 +1,11 @@
 <template>
     <div>
-        <div :class="styles.FORM.FORM_GROUP">
+        <!-- <div :class="styles.FORM.FORM_GROUP">
             <label>
                 Is Real Number (Float/Double)
                 <input type="checkbox" v-model="control.isReal">
             </label>
-        </div>
+        </div> -->
 
         <div :class="styles.FORM.FORM_GROUP" v-show="control.isReal">
             <label>Decimal Places</label>
