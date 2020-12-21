@@ -1,9 +1,9 @@
 <template>
     <div class="sidebar sidebar-custom-class">
-        <span class="close"
+        <!-- <span class="close"
               @click="close"
               v-html="$form.getIcon('close', '24px', '24px', '#000')">
-        </span>
+        </span> -->
 
         <component v-if="component"
                    :is="component"
