@@ -22,6 +22,7 @@
     "deep-equal": "^2.0.3",
     "litepicker": "^1.4.6",
     "vue": "^2.6.10",
+    "vue-click-outside": "^1.1.0",
     "vuedraggable": "^2.23.2"
   },
   "devDependencies": {
