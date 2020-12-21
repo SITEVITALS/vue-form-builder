@@ -32,7 +32,7 @@
     export default {
         name: "DropdownControl",
         mixins: [CONTROL_FIELD_EXTEND_MIXIN],
-        props: ['dummy-value-container'],
+        // props: ['dummy-value-container'],
         data: () => ({
             listOptions: [],
             dummyData: null,

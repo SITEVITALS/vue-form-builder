@@ -73,7 +73,7 @@ const MODEL = {
                 // if the control has default factory creation closure, run it
                 if (typeof CONTROLS[controlItem.type].rendererDefaultData === 'function') {
                     containerObj[name] = CONTROLS[controlItem.type].rendererDefaultData(controlItem)
-                    dummyContainerObj[controlId] = CONTROLS[controlItem.type].rendererDefaultData(controlItem)
+                    // dummyContainerObj[controlId] = CONTROLS[controlItem.type].rendererDefaultData(controlItem)
                 }
             });
             // console.log(controlIds)
