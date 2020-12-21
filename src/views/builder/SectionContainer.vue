@@ -4,7 +4,7 @@
                               @active="setActive" />
 
         <component :is="sectionViewComponent"
-                   :section="section"
+                   :section.sync="section"
                    :rows="rows"
                    :controls="controls"
                    :key="section.uniqueId" />

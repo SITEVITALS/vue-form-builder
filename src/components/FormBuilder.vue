@@ -11,7 +11,7 @@
 
         <!-- sections of the form -->
         <SectionContainer v-for="(sectionData) in sortedSections"
-                          :section="sectionData"
+                          :section.sync="sectionData"
                           :rows="formData.rows"
                           :controls="formData.controls"
                           :key="sectionData.uniqueId"

@@ -2,17 +2,16 @@
     <div class="normal-section">
         <div class="headline-block p5" v-show="section.isShowHeadline">
             <!-- <h2 :class="section.headlineAdditionalClass" v-text="section.headline"></h2> -->
-            <p contenteditable="true" @keydown.enter.prevent>{{ section.headline }}</p>
+            <!-- <p contenteditable="true" @keydown.enter.prevent>{{ section.headline }}</p> -->
 
             <div>
-                <div v-click-outside="hide" @click="toggle">Toggle</div>
-                <div v-show="opened">Popup item</div>
+                <div v-click-outside="hide" ref="section_title" v-on:keyup.13="hide" @keydown.enter.prevent contenteditable="true" @click="toggle">{{ section.headline }}</div>
+                <!-- <div v-show="opened">Popup item</div> -->
             </div>
 
             <!-- <p :class="section.subHeadlineAdditionalClass" v-text="section.subHeadline"></p> -->
         </div>
 
-        <!--- SHOW CONTROLS WITH SORTABLE --->
         <draggable
                 :class="draggableClasses"
                 ghost-class="ghost"
@@ -55,10 +54,12 @@
         }),
         methods: {
             toggle () {
-                this.opened = true
+                // this.opened = true
             },
             hide () {
-                this.opened = false
+                this.$set(this.section, 'headline', this.$refs.section_title.innerHTML)
+                // this.section.headline = this.$refs.section_title.innerHTML
+                // this.opened = false
             }
         },
 
