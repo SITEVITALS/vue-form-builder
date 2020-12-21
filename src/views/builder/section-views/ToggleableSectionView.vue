@@ -13,7 +13,9 @@
                       v-show="section.isShowHeadline">
                 </span> -->
 
-                <span v-click-outside="hide" ref="section_title" v-on:keyup.13="hide" @keydown.enter.prevent :contenteditable="content" @click="toggle">{{ section.headline }}</span>
+                <span v-click-outside="hide" ref="section_title" v-on:keyup.13="hide" 
+                @input="onInput"
+                @keydown.enter.prevent :contenteditable="content" @click="toggle">{{ section.headline }}</span>
 
 
                 <!-- subheadline -->
@@ -66,9 +68,13 @@
         components: {AddControlControl},
         mixins: [SECTION_VIEW_MIXINS, STYLE_INJECTION_MIXIN, TOGGLEABLE_MIXIN],
         data: () => ({
-            content: true
+            content: true,
+            dummy: null
         }),
         methods: {
+            onInput(e) {
+                this.$set(this.section, 'headline', this.$refs.section_title.innerHTML)
+            },
             toggle () {
                 this.content = true
             },
@@ -78,6 +84,11 @@
                 setTimeout(() => { this.content = true }, 500);
             }
         },
+
+        mounted() {
+            this.dummy = this.section.headline
+        },
+
         directives: {
             ClickOutside
         }

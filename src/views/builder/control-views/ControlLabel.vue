@@ -5,7 +5,10 @@
                :class="control.additionalLabelClass">
         </label> -->
 
-        <div :for="control.uniqueId" :class="control.additionalLabelClass" v-click-outside="hide" ref="input_title" v-on:keyup.13="hide" @keydown.enter.prevent :contenteditable="content" @click="toggle">{{ control.label }}</div>
+        <div :for="control.uniqueId" :class="control.additionalLabelClass" v-click-outside="hide"  id="asd"
+        ref="input_title" v-on:keyup.13="hide" @keydown.enter.prevent :contenteditable="content"
+        @input="onInput"
+        @click="toggle">{{ dummy }}</div>
 
 
 
@@ -27,10 +30,20 @@
             }
         },
         data: () => ({
-            content: true
+            content: true,
+            dummy: null
         }),
         methods: {
+            onInput(e) {
+                this.$set(this.control, 'label', this.$refs.input_title.innerHTML)
+                // this.prevValue = e.target.value;
+                // this.position = e.target.selectionStart;
+            },
+            onRemove() {
+                this.$set(this.control, 'label', this.$refs.input_title.innerHTML)
+            },
             toggle () {
+                // alert()
                 this.content = true
             },
             hide () {
@@ -38,6 +51,9 @@
                 this.content = false
                 setTimeout(() => { this.content = true }, 500);
             }
+        },
+        mounted() {
+            this.dummy = this.control.label
         },
         directives: {
             ClickOutside
