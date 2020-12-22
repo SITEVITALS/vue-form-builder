@@ -36,8 +36,6 @@
         methods: {
             onInput(e) {
                 this.$set(this.control, 'label', this.$refs.input_title.innerHTML)
-                // this.prevValue = e.target.value;
-                // this.position = e.target.selectionStart;
             },
             onRemove() {
                 this.$set(this.control, 'label', this.$refs.input_title.innerHTML)
