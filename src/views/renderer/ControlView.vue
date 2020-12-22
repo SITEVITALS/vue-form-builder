@@ -8,7 +8,7 @@
             <component :is="controlComponent"
                        :control="control"
                        :value-container="valueContainer"
-                       :dummy-value-container.sync="dummyValueContainer"
+                       :dummy-value-container="dummyValueContainer"
                        v-model="valueContainer[controlName]"
                        :class="validationErrorClasses"
             />

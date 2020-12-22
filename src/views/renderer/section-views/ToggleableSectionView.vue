@@ -29,7 +29,7 @@
                              :control="controls[controlId]"
                              :parent-id="section.uniqueId"
                              :value-container="valueContainer"
-                             :dummy-value-container.sync="dummyValueContainer"
+                             :dummy-value-container="dummyValueContainer"
                              :validation-errors="validationErrors"
                 />
             </div>
