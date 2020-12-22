@@ -44,7 +44,7 @@
             value (val) {
                 let option = this.listOptions.find(element => element.value == val)
                 localStorage.setItem(this.control.uniqueId, JSON.stringify(option));
-                // this.$set(this.dummyValueContainer, this.control.uniqueId, val)
+                this.$set(this.dummyValueContainer, this.control.uniqueId, val)
                 // console.log(localStorage.getItem(this.control.uniqueId))
             },
             control: {
