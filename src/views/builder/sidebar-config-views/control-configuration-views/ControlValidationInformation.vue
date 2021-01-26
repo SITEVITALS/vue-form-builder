@@ -54,14 +54,14 @@
 
             </div>
 
-            <div :class="styles.FORM.FORM_GROUP">
+            <!-- <div :class="styles.FORM.FORM_GROUP">
 
                 <label>Default Error Message</label>
                 <input type="text"
                        :class="styles.FORM.FORM_CONTROL"
                        v-model="addedRule.errorMessage">
 
-            </div>
+            </div> -->
         </div>
 
     </SidebarToggleableContainer>
