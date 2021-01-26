@@ -1,5 +1,5 @@
 <template>
-    <SidebarToggleableContainer headline="Validation">
+    <SidebarToggleableContainer headline="Validation" addClass="custom-validation">
 
         <label>
             Validation Rules

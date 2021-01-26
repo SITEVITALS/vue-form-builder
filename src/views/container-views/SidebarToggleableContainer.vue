@@ -1,5 +1,5 @@
 <template>
-    <div class="toggleable-section">
+    <div :class="'toggleable-section ' + addClass">
         <!-- <div class="headline-block">
             <h5>
                 <span class="toggle-item"
@@ -41,6 +41,10 @@
             initialOpen: {
                 type: Boolean,
                 default: true
+            },
+            addClass: {
+                type: String,
+                default: 'custom-toggle'
             }
         },
 
