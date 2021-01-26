@@ -10,7 +10,7 @@
             </span>
         </label>
 
-        <div class="list-selection"
+        <div class="list-selection sidebar-validation"
              v-for="(addedRule, ruleIndex) in control.validations"
              :key="addedRule.ruleType">
 
