@@ -85,7 +85,7 @@
 
         <hr>
 
-        <FormBuilder v-if="!isRenderer" v-model="formData" :editable="true"></FormBuilder>
+        <FormBuilder v-if="!isRenderer" v-model="formData" :editable="false"></FormBuilder>
 
         <div class="row" v-if="isRenderer" style="padding: 20px; margin-right: 0">
             <div class="col-md-12 mb-4">

@@ -4,14 +4,19 @@
             <!-- <h2 :class="section.headlineAdditionalClass" v-text="section.headline"></h2> -->
             <!-- <p contenteditable="true" @keydown.enter.prevent>{{ section.headline }}</p> -->
 
-            <div>
-                <h2>
-                    <span v-click-outside="hide" ref="section_title" v-on:keyup.13="hide" 
-                    @input="onInput"
-                    @keydown.enter.prevent :contenteditable="content" @click="toggle">{{ dummy }}</span>
-                </h2>
-                <!-- <div v-show="opened">Popup item</div> -->
-            </div>
+            <template v-if="editable">
+                <div>
+                    <h2>
+                        <span v-click-outside="hide" ref="section_title" v-on:keyup.13="hide" 
+                        @input="onInput"
+                        @keydown.enter.prevent :contenteditable="content" @click="toggle">{{ dummy }}</span>
+                    </h2>
+                </div>
+            </template>
+            <template v-else>
+                <h2 :class="section.headlineAdditionalClass" v-text="section.headline"></h2>
+            </template>
+
 
             <!-- <p :class="section.subHeadlineAdditionalClass" v-text="section.subHeadline"></p> -->
         </div>
