@@ -24,9 +24,9 @@
         <!-- global stuff -->
         <GlobalSidebar :formData="formData" v-if="editable" />
 
-        <hr>
-
-        <p class="copyright-text" v-text="copyrightText"></p>
+        <!-- <hr> -->
+        <!-- <p class="copyright-text" v-text="copyrightText"></p> -->
+        
     </div>
 </template>
 
