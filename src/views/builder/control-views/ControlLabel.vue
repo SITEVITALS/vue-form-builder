@@ -1,14 +1,23 @@
 <template>
     <div class="control-label-container">
-        <!-- <label v-text="control.label"
-               :for="control.uniqueId"
-               :class="control.additionalLabelClass">
-        </label> -->
 
-        <div :for="control.uniqueId" :class="control.additionalLabelClass" v-click-outside="hide"  id="asd"
-        ref="input_title" v-on:keyup.13="hide" @keydown.enter.prevent :contenteditable="content"
-        @input="onInput"
-        @click="toggle">{{ dummy }}</div>
+        <template v-if="editable">
+
+            <div :for="control.uniqueId" :class="control.additionalLabelClass" v-click-outside="hide"  id="asd"
+                ref="input_title" v-on:keyup.13="hide" @keydown.enter.prevent :contenteditable="content"
+                @input="onInput"
+                @click="toggle">{{ dummy }}</div>
+                
+        </template>
+        <template v-else>
+            
+            <label v-text="control.label"
+                   :for="control.uniqueId"
+                   :class="control.additionalLabelClass">
+            </label>
+            
+        </template>
+
 
 
 
@@ -27,7 +36,8 @@
             control: {
                 type: Object,
                 required: true
-            }
+            },
+            editable: Boolean
         },
         data: () => ({
             content: true,

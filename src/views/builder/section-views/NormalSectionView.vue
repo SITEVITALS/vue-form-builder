@@ -26,7 +26,8 @@
             <ControlView v-for="controlId in section.controls"
                          :key="controlId"
                          :control.sync="controls[controlId]"
-                         :parent-id="section.uniqueId" />
+                         :parent-id="section.uniqueId"
+                         :editable="editable" />
 
             <p v-if="!hasControl">
                 Droppable Zone / Controls will be showed here...
@@ -34,7 +35,7 @@
         </draggable>
 
         <!-- Add Control -->
-        <AddControlControl :section="section" />
+        <AddControlControl :section="section" v-if="editable" />
     </div>
 </template>
 
@@ -52,6 +53,9 @@
      */
     export default {
         name: "NormalSectionView",
+        props: {
+            editable: Boolean,
+        },
         mixins: [SECTION_VIEW_MIXINS],
         data: () => ({
             content: true,

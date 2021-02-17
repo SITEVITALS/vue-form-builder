@@ -15,15 +15,14 @@
                           :rows="formData.rows"
                           :controls.sync="formData.controls"
                           :key="sectionData.uniqueId"
+                          :editable="editable"
         />
 
         <!-- below all -->
-        <AddSectionControl @addSectionNotify="addSection" />
+        <AddSectionControl @addSectionNotify="addSection" v-if="editable" />
 
         <!-- global stuff -->
-        <GlobalSidebar
-                :formData="formData"
-        />
+        <GlobalSidebar :formData="formData" v-if="editable" />
 
         <hr>
 
@@ -46,6 +45,12 @@
             FormConfiguration,
             SectionContainer,
             AddSectionControl
+        },
+        props: {
+            editable: {
+                type: Boolean,
+                default: true
+            }
         },
         mixins: FormBuilderBusiness,
         data: () => ({

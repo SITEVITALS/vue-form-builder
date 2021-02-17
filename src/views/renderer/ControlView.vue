@@ -2,7 +2,7 @@
     <div :class="[control.containerClass, 'control-view-wrapper', control.additionalContainerClass]">
         <div class="control-view">
             <!-- render the label -->
-            <ControlLabel v-show="control.isShowLabel" :control="control" />
+            <ControlLabel v-show="control.isShowLabel" :control="control" :editable="false" />
 
             <!-- render the exact field -->
             <component :is="controlComponent"

@@ -1,13 +1,14 @@
 <template>
     <div class="section-container" :class="{'active': isDoingConfiguration}" ref="asd" :id="section.healine">
-        <SectionNavigationBar :section="section"
-                              @active="setActive" />
+        <SectionNavigationBar :section="section" @active="setActive" v-if="editable" />
 
         <component :is="sectionViewComponent"
                    :section.sync="section"
                    :rows="rows"
                    :controls.sync="controls"
-                   :key="section.uniqueId" />
+                   :key="section.uniqueId"
+                   :editable="editable"
+                  />
 
     </div>
 </template>
@@ -23,6 +24,7 @@
             section: Object,
             rows: Object,
             controls: Object,
+            editable: Boolean,
         },
         data: () => ({
             isDoingConfiguration: false

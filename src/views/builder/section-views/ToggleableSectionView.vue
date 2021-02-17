@@ -30,7 +30,6 @@
         <transition name="slide">
             <div v-show="isVisible">
 
-                <!--- SHOW CONTROLS / With Draggable --->
                 <draggable
                         :class="draggableClasses"
                         ghost-class="ghost"
@@ -41,15 +40,15 @@
                     <ControlView v-for="controlId in section.controls"
                                  :key="controlId"
                                  :control="controls[controlId]"
-                                 :parent-id="section.uniqueId" />
+                                 :parent-id="section.uniqueId" 
+                                 :editable="editable" />
 
                     <p v-if="!hasControl">
                         Droppable Zone / Controls will be showed here...
                     </p>
                 </draggable>
 
-                <!-- Add More Control? -->
-                <AddControlControl :section="section" />
+                <AddControlControl :section="section" v-if="editable" />
             </div>
         </transition>
 
@@ -65,6 +64,9 @@
 
     export default {
         name: "ToggleableSectionView",
+        props: {
+            editable: Boolean,
+        },
         components: {AddControlControl},
         mixins: [SECTION_VIEW_MIXINS, STYLE_INJECTION_MIXIN, TOGGLEABLE_MIXIN],
         data: () => ({

@@ -2,17 +2,15 @@
     <div :class="[control.containerClass, 'control-view-wrapper', control.additionalContainerClass]">
         <div class="control-view" :class="{'active': isActive}">
             <!-- render the label -->
-            <ControlLabel v-show="control.isShowLabel" :control="control" />
+            <ControlLabel v-show="control.isShowLabel" :control="control" :editable="editable" />
 
             <!-- render the exact field -->
-            <component :is="controlComponent"
-                       :control="control" />
+            <component :is="controlComponent" :control="control" />
 
         </div>
 
         <!-- render the right option to config/drag/... -->
-        <ControlOption @delete="deleteControl"
-                       @config="openConfiguration" />
+        <ControlOption @delete="deleteControl" @config="openConfiguration" v-if="editable" />
     </div>
 </template>
 
@@ -37,7 +35,8 @@
             parentId: {
                 type: String,
                 required: true,
-            }
+            },
+            editable: Boolean,
         },
 
         data: () => ({
