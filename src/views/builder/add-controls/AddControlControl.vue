@@ -1,10 +1,10 @@
 <template>
-    <div class="add-control-outer" :class="styles.COLUMNS.COL12">
+    <!-- <div class="add-control-outer" :class="styles.COLUMNS.COL12">
         <div class="add-control-container" @click="openAddControl">
             <span v-html="$form.getIcon('addOutline', '32px', '32px', '#000')"></span>
             <span>Add Control</span>
         </div>
-    </div>
+    </div> -->
 </template>
 
 <script>

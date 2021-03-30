@@ -1,6 +1,12 @@
 <template>
     <div class="section-config">
         <div class="buttons">
+
+            <button :class="styles.BUTTON.PRIMARY"
+                    title="Add Control"
+                    @click="openAddControl"
+                    v-html="$form.getIcon('addOutline')"></button>
+            
             <button :class="styles.BUTTON.PRIMARY"
                     title="Push Up"
                     @click="pushUp"
@@ -40,7 +46,23 @@
                 required: true,
             }
         },
+        computed: {
+            /**
+             * Runner ID to detect the right
+             * @returns {string}
+             */
+            runnerId() {
+                return `add-control-${this.section.uniqueId}`
+            }
+        },
         methods: {
+            /**
+             * Open the sidebar to add control yeah yeah
+             */
+            openAddControl() {
+                this.$formEvent.$emit(EVENT_CONSTANTS.BUILDER.SIDEBAR.OPEN, this.runnerId)
+            },
+
             /**
              * Submit to delete a Section
              */
