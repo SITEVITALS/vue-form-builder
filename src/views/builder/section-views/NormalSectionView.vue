@@ -1,20 +1,20 @@
 <template>
     <div class="normal-section">
         <div class="headline-block p5" v-show="section.isShowHeadline">
-            <!-- <h2 :class="section.headlineAdditionalClass" v-text="section.headline"></h2> -->
+            <!-- <h6 :class="section.headlineAdditionalClass" v-text="section.headline"></h6> -->
             <!-- <p contenteditable="true" @keydown.enter.prevent>{{ section.headline }}</p> -->
 
             <template v-if="editable">
                 <div>
-                    <h2>
+                    <h6 class="toggleable-headline'">
                         <span v-click-outside="hide" ref="section_title" v-on:keyup.13="hide" 
                         @input="onInput"
                         @keydown.enter.prevent :contenteditable="content" @click="toggle">{{ dummy }}</span>
-                    </h2>
+                    </h6>
                 </div>
             </template>
             <template v-else>
-                <h2 :class="section.headlineAdditionalClass" v-text="section.headline"></h2>
+                <h6 :class="section.headlineAdditionalClass + ' toggleable-headline'" v-text="section.headline"></h6>
             </template>
 
 
