@@ -6871,12 +6871,12 @@ var SectionContainervue_type_template_id_0b1c3af9_scoped_true_staticRenderFns = 
 
 // CONCATENATED MODULE: ./src/views/builder/SectionContainer.vue?vue&type=template&id=0b1c3af9&scoped=true&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"43d787be-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/builder/SectionNavigationBar.vue?vue&type=template&id=a52815a8&
-var SectionNavigationBarvue_type_template_id_a52815a8_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"section-config"},[_c('div',{staticClass:"buttons"},[_c('button',{class:_vm.styles.BUTTON.PRIMARY,attrs:{"title":"Add Control"},domProps:{"innerHTML":_vm._s(_vm.$form.getIcon('addOutline'))},on:{"click":_vm.openAddControl}}),_c('button',{class:_vm.styles.BUTTON.PRIMARY,attrs:{"title":"Push Up"},domProps:{"innerHTML":_vm._s(_vm.$form.getIcon('arrowUp'))},on:{"click":_vm.pushUp}}),_c('button',{class:_vm.styles.BUTTON.SECONDARY,attrs:{"title":"Push Down"},domProps:{"innerHTML":_vm._s(_vm.$form.getIcon('arrowDown'))},on:{"click":_vm.pushDown}}),_c('button',{class:_vm.styles.BUTTON.DANGER,on:{"click":_vm.deleteSection}},[_c('span',{domProps:{"innerHTML":_vm._s(_vm.$form.getIcon('trash'))}}),_c('span',[_vm._v("Delete")])])])])}
-var SectionNavigationBarvue_type_template_id_a52815a8_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"43d787be-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/builder/SectionNavigationBar.vue?vue&type=template&id=a424b044&
+var SectionNavigationBarvue_type_template_id_a424b044_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"section-config"},[_c('div',{staticClass:"buttons"},[_c('button',{class:_vm.styles.BUTTON.PRIMARY + ' config-button',attrs:{"title":"Add Control"},domProps:{"innerHTML":_vm._s(_vm.$form.getIcon('addOutline'))},on:{"click":_vm.openAddControl}}),_c('button',{class:_vm.styles.BUTTON.PRIMARY + ' config-button',attrs:{"title":"Push Up"},domProps:{"innerHTML":_vm._s(_vm.$form.getIcon('arrowUp'))},on:{"click":_vm.pushUp}}),_c('button',{class:_vm.styles.BUTTON.SECONDARY + ' config-button',attrs:{"title":"Push Down"},domProps:{"innerHTML":_vm._s(_vm.$form.getIcon('arrowDown'))},on:{"click":_vm.pushDown}}),_c('button',{class:_vm.styles.BUTTON.DANGER + ' config-button',on:{"click":_vm.deleteSection}},[_c('span',{domProps:{"innerHTML":_vm._s(_vm.$form.getIcon('trash'))}}),_c('span',[_vm._v("Delete")])])])])}
+var SectionNavigationBarvue_type_template_id_a424b044_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/views/builder/SectionNavigationBar.vue?vue&type=template&id=a52815a8&
+// CONCATENATED MODULE: ./src/views/builder/SectionNavigationBar.vue?vue&type=template&id=a424b044&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.object.assign.js
 var es6_object_assign = __webpack_require__("f751");
@@ -7190,8 +7190,8 @@ var SidebarSectionConfiguration_component = Object(componentNormalizer["a" /* de
 
 var SectionNavigationBar_component = Object(componentNormalizer["a" /* default */])(
   builder_SectionNavigationBarvue_type_script_lang_js_,
-  SectionNavigationBarvue_type_template_id_a52815a8_render,
-  SectionNavigationBarvue_type_template_id_a52815a8_staticRenderFns,
+  SectionNavigationBarvue_type_template_id_a424b044_render,
+  SectionNavigationBarvue_type_template_id_a424b044_staticRenderFns,
   false,
   null,
   null,

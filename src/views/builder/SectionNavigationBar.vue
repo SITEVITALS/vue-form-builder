@@ -2,17 +2,17 @@
     <div class="section-config">
         <div class="buttons">
 
-            <button :class="styles.BUTTON.PRIMARY"
+            <button :class="styles.BUTTON.PRIMARY + ' config-button'"
                     title="Add Control"
                     @click="openAddControl"
                     v-html="$form.getIcon('addOutline')"></button>
             
-            <button :class="styles.BUTTON.PRIMARY"
+            <button :class="styles.BUTTON.PRIMARY + ' config-button'"
                     title="Push Up"
                     @click="pushUp"
                     v-html="$form.getIcon('arrowUp')"></button>
 
-            <button :class="styles.BUTTON.SECONDARY"
+            <button :class="styles.BUTTON.SECONDARY + ' config-button'"
                     title="Push Down"
                     @click="pushDown"
                     v-html="$form.getIcon('arrowDown')"></button>
@@ -22,7 +22,7 @@
                 <span>Configuration</span>
             </button> -->
 
-            <button :class="styles.BUTTON.DANGER" @click="deleteSection">
+            <button :class="styles.BUTTON.DANGER + ' config-button'" @click="deleteSection">
                 <span v-html="$form.getIcon('trash')"></span>
                 <span>Delete</span>
             </button>
