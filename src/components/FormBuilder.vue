@@ -3,6 +3,8 @@
         <!-- top configuration -->
         <FormConfiguration v-model="formData.formConfig" />
 
+        <AddSectionControl @addSectionNotify="addSection" v-if="editable" />
+
         <!-- form headline -->
         <div class="form-headline-container" v-show="formData.formConfig.isShowHeadline">
             <h1 v-text="formData.formConfig.headline"></h1>
@@ -19,7 +21,6 @@
         />
 
         <!-- below all -->
-        <AddSectionControl @addSectionNotify="addSection" v-if="editable" />
 
         <!-- global stuff -->
         <GlobalSidebar :formData="formData" v-if="editable" />

@@ -1,9 +1,10 @@
 <template>
-    <div class="add-section-container" :class="styles.COLUMNS.COL12" @click="showOption">
+    <div class="add-section-container" :class="styles.COLUMNS.COL12">
 
-        <button :class="styles.BUTTON.PRIMARY + ' config-button'"
+<!--         <button :class="styles.BUTTON.PRIMARY + ' config-button'"
                     title="Add Section"
-                    v-html="$form.getIcon('addOutline', '32px', '32px', '#000')"></button>
+                     @click="showOption"
+                    v-html="$form.getIcon('addOutline', '32px', '32px', '#000')"></button> -->
 
         <!-- <p>
             <span v-html="$form.getIcon('addOutline', '32px', '32px', '#000')"></span>
