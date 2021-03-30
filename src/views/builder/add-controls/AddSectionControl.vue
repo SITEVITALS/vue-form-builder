@@ -1,9 +1,13 @@
 <template>
     <div class="add-section-container" :class="styles.COLUMNS.COL12" @click="showOption">
-        <p>
+
+        <button :class="styles.BUTTON.PRIMARY + ' config-button'"
+            v-html="$form.getIcon('addOutline', '32px', '32px', '#000')"></button>
+
+        <!-- <p>
             <span v-html="$form.getIcon('addOutline', '32px', '32px', '#000')"></span>
             <span>Add Section</span>
-        </p>
+        </p> -->
 
         <div :class="[styles.LIST_GROUP.CONTAINER, 'add-container-list'] + ' section-types'" v-show="show">
 
