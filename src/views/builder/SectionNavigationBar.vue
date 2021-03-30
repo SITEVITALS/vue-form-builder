@@ -22,10 +22,10 @@
                 <span>Configuration</span>
             </button> -->
 
-            <button :class="styles.BUTTON.DANGER + ' config-button'" @click="deleteSection">
-                <span v-html="$form.getIcon('trash')"></span>
-                <span>Delete</span>
-            </button>
+            <button :class="styles.BUTTON.DANGER + ' config-button'"
+                    title="Delete"
+                    @click="deleteSection"
+                    v-html="$form.getIcon('trash')"></button>
         </div>
     </div>
 </template>
