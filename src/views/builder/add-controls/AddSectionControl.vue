@@ -5,7 +5,7 @@
             <span>Add Section</span>
         </p>
 
-        <div :class="[styles.LIST_GROUP.CONTAINER, 'add-container-list'] + ' section-container'" v-show="show">
+        <div :class="[styles.LIST_GROUP.CONTAINER, 'add-container-list'] + ' section-types'" v-show="show">
 
             <button class="section-type" v-for="(sectionInfo, sectionKey) in sectionTypes" @click="addNew(sectionKey)">
                 {{ sectionInfo.name }}
