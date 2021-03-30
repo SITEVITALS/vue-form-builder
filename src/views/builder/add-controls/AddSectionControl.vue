@@ -2,7 +2,8 @@
     <div class="add-section-container" :class="styles.COLUMNS.COL12" @click="showOption">
 
         <button :class="styles.BUTTON.PRIMARY + ' config-button'"
-            v-html="$form.getIcon('addOutline', '32px', '32px', '#000')"></button>
+                    title="Add Section"
+                    v-html="$form.getIcon('addOutline', '32px', '32px', '#000')"></button>
 
         <!-- <p>
             <span v-html="$form.getIcon('addOutline', '32px', '32px', '#000')"></span>
@@ -11,7 +12,7 @@
 
         <div :class="[styles.LIST_GROUP.CONTAINER, 'add-container-list'] + ' section-types'" v-show="show">
 
-            <button class="section-type" v-for="(sectionInfo, sectionKey) in sectionTypes" @click="addNew(sectionKey)">
+            <button :title="sectionInfo.description" class="section-type" v-for="(sectionInfo, sectionKey) in sectionTypes" @click="addNew(sectionKey)">
                 {{ sectionInfo.name }}
             </button>
 
