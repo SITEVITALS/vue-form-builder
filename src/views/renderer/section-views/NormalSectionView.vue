@@ -1,7 +1,7 @@
 <template>
     <div class="normal-section">
         <div class="headline-block" v-show="section.isShowHeadline">
-            <h2 :class="section.headlineAdditionalClass" v-text="section.headline"></h2>
+            <h6 :class="section.headlineAdditionalClass" v-text="section.headline"></h6>
             <p :class="section.subHeadlineAdditionalClass" v-text="section.subHeadline"></p>
         </div>
 

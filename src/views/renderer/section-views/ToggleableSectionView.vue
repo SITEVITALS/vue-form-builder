@@ -1,7 +1,7 @@
 <template>
     <div class="toggleable-section">
         <div class="headline-block">
-            <h2 :class="section.headlineAdditionalClass">
+            <h6 :class="section.headlineAdditionalClass">
                 <!-- chevron icon to show/hide -->
                 <span class="toggle-item"
                   v-html="isVisible ? iconClose : iconOpen"
@@ -18,7 +18,7 @@
                        v-text="section.subHeadline"
                        v-show="section.isShowHeadline">
                 </small>
-            </h2>
+            </h6>
         </div>
 
         <!-- Rows - BLock it for animation -->
