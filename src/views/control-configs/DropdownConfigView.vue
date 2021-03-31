@@ -64,8 +64,13 @@
              v-show="this.control.dataMode === listDataModes.list.val">
 
             <label>
+                <button :class="styles.BUTTON.PRIMARY + ' config-button'"
+                    title="Add Option"
+                    @click="addListItem"
+                    v-html="$form.getIcon('addOutline')"></button>
                 Options
-                <span class="pointer" style="margin-left: 5px; color: #006cd0; text-decoration: underline;" @click="addListItem">Add Option</span>
+
+                <!-- <span class="pointer" style="margin-left: 5px; color: #006cd0; text-decoration: underline;" @click="addListItem">Add Option</span> -->
                 <!-- <span class="pointer"
                       @click="addListItem"
                       v-html="$form.getIcon('addOutline', '16px', '16px', 'green')">
@@ -76,24 +81,26 @@
             <!-- Im using div instead of table. Table too small :( -->
             <div :class="['list-selection']" v-for="(listItem, iItem) in control.items" :key="iItem">
 
-                <div :class="styles.FORM.FORM_GROUP">
-                    <input type="text" :class="styles.FORM.FORM_CONTROL"
-                           placeholder="Item Value"
-                           v-model="listItem.value">
-                </div>
-
-                <div :class="styles.FORM.FORM_GROUP">
-                    <input type="text" :class="styles.FORM.FORM_CONTROL"
-                           placeholder="Label Text"
-                           v-model="listItem.text">
-                </div>
-
                 <div :class="styles.FORM.FORM_GROUP" v-if="dropdown">
                   <select :class="styles.FORM.FORM_CONTROL" v-model="listItem.next_section">
-                    <option value="">Please Select</option>
+                    <option value="">Select Section</option>
                     <option v-for="section in formSections" :key="section.uniqueId" :value="section.uniqueId">{{ section.headline }}</option>
                   </select>
                 </div>
+
+                <div :class="styles.FORM.FORM_GROUP">
+                    <input type="text" :class="styles.FORM.FORM_CONTROL"
+                           placeholder="Label"
+                           v-model="listItem.text">
+                </div>
+
+                <div :class="styles.FORM.FORM_GROUP">
+                    <input type="text" :class="styles.FORM.FORM_CONTROL"
+                           placeholder="Value"
+                           v-model="listItem.value">
+                </div>
+
+
 
                 <div class="tool-block">
                     <span class="pointer"

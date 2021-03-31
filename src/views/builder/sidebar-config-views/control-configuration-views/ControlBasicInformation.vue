@@ -11,7 +11,7 @@
         </div> -->
 
         <div :class="styles.FORM.FORM_GROUP">
-            <!-- <label>Input Title</label> -->
+            <label>Label</label>
             <input type="text" :class="styles.FORM.FORM_CONTROL" v-model="control.label" placeholder="Input Title">
         </div>
 
@@ -20,16 +20,16 @@
             <input type="text" :class="styles.FORM.FORM_CONTROL" v-model="control.subLabel">
         </div> -->
 
+        <div :class="styles.FORM.FORM_GROUP">
+            <label>Placeholder</label>
+            <input type="text" :class="styles.FORM.FORM_CONTROL" v-model="control.placeholderText" placeholder="Placeholder">
+        </div>
 
         <div :class="styles.FORM.FORM_GROUP">
-            <!-- <label>Default Value (Optional)</label> -->
+            <label>Default</label>
             <input type="text" :class="styles.FORM.FORM_CONTROL" v-model="control.defaultValue" placeholder="Default Value">
         </div>
         
-        <div :class="styles.FORM.FORM_GROUP">
-            <!-- <label>Field Placeholder (Optional)</label> -->
-            <input type="text" :class="styles.FORM.FORM_CONTROL" v-model="control.placeholderText" placeholder="Placeholder">
-        </div>
         
         <!-- <div :class="styles.FORM.FORM_GROUP">
             <label>
