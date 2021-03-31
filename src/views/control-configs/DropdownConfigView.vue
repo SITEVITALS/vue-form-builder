@@ -77,6 +77,7 @@
                 </span> -->
             </label>
             <br>
+            <br>
 
             <div class="list-selection" v-if="control.items.length">
               <div class="form-group">
