@@ -81,12 +81,6 @@
             <!-- Im using div instead of table. Table too small :( -->
             <div :class="['list-selection']" v-for="(listItem, iItem) in control.items" :key="iItem">
 
-                <div :class="styles.FORM.FORM_GROUP" v-if="dropdown">
-                  <select :class="styles.FORM.FORM_CONTROL" v-model="listItem.next_section">
-                    <option value="">Select Section</option>
-                    <option v-for="section in formSections" :key="section.uniqueId" :value="section.uniqueId">{{ section.headline }}</option>
-                  </select>
-                </div>
 
                 <div :class="styles.FORM.FORM_GROUP">
                     <input type="text" :class="styles.FORM.FORM_CONTROL"
@@ -100,7 +94,12 @@
                            v-model="listItem.value">
                 </div>
 
-
+                <div :class="styles.FORM.FORM_GROUP" v-if="dropdown">
+                  <select :class="styles.FORM.FORM_CONTROL" v-model="listItem.next_section">
+                    <option value="">Select Section</option>
+                    <option v-for="section in formSections" :key="section.uniqueId" :value="section.uniqueId">{{ section.headline }}</option>
+                  </select>
+                </div>
 
                 <div class="tool-block">
                     <span class="pointer"

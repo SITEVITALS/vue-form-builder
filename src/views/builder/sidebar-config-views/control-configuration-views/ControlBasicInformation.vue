@@ -10,8 +10,8 @@
             <input type="text" :class="styles.FORM.FORM_CONTROL" v-model="control.name">
         </div> -->
 
-        <div :class="styles.FORM.FORM_GROUP">
-            <label>Label</label>
+        <div :class="styles.FORM.FORM_GROUP + ' input-configuration'">
+            <div>Label</div>
             <input type="text" :class="styles.FORM.FORM_CONTROL" v-model="control.label" placeholder="Input Title">
         </div>
 
@@ -20,13 +20,13 @@
             <input type="text" :class="styles.FORM.FORM_CONTROL" v-model="control.subLabel">
         </div> -->
 
-        <div :class="styles.FORM.FORM_GROUP">
-            <label>Placeholder</label>
+        <div :class="styles.FORM.FORM_GROUP + ' input-configuration'">
+            <div>Placeholder</div>
             <input type="text" :class="styles.FORM.FORM_CONTROL" v-model="control.placeholderText" placeholder="Placeholder">
         </div>
 
-        <div :class="styles.FORM.FORM_GROUP">
-            <label>Default</label>
+        <div :class="styles.FORM.FORM_GROUP + ' input-configuration'">
+            <div>Default</div>
             <input type="text" :class="styles.FORM.FORM_CONTROL" v-model="control.defaultValue" placeholder="Default Value">
         </div>
         
