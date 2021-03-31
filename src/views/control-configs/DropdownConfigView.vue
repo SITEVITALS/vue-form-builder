@@ -78,6 +78,18 @@
             </label>
             <br>
 
+            <div class="list-selection" v-if="control.items.length">
+              <div class="form-group">
+                <span>Label</span>
+              </div>
+              <div class="form-group">
+                <span>Value</span>
+              </div>
+              <div class="form-group">
+                <span>Launch Section</span>
+              </div>
+            </div>
+
             <!-- Im using div instead of table. Table too small :( -->
             <div :class="['list-selection']" v-for="(listItem, iItem) in control.items" :key="iItem">
 
