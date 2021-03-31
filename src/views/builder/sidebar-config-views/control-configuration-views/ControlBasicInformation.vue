@@ -31,7 +31,7 @@
         </div>
 
         <div :class="styles.FORM.FORM_GROUP + ' input-configuration'">
-            <div><input type="checkbox" value="true" v-model="required"> Field Required </div>
+            <div>Field Required <input type="checkbox" value="true" v-model="required"> </div>
             <!-- <input type="text" :class="styles.FORM.FORM_CONTROL" v-model="control.defaultValue" placeholder="Default Value"> -->
         </div>
 
