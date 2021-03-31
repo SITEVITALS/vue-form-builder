@@ -96,7 +96,7 @@
 
                 <div :class="styles.FORM.FORM_GROUP" v-if="dropdown">
                   <select :class="styles.FORM.FORM_CONTROL" v-model="listItem.next_section">
-                    <option value="">Select Section</option>
+                    <option value="">Launch Section</option>
                     <option v-for="section in formSections" :key="section.uniqueId" :value="section.uniqueId">{{ section.headline }}</option>
                   </select>
                 </div>
