@@ -46,28 +46,28 @@ const CONTROLS = {
         fieldComponent: InputControl
     },
 
-    number: {
-        name: "Number Input Field",
-        description: "Input text single line - Number Only",
+    // number: {
+    //     name: "Number Input Field",
+    //     description: "Input text single line - Number Only",
 
-        configData: {
-            isReal: false, // integer or real (float/double)
-            decimalPlace: 1, // [For Real] 0.xxx?? (x = num of places)
-        },
+    //     configData: {
+    //         isReal: false, // integer or real (float/double)
+    //         decimalPlace: 1, // [For Real] 0.xxx?? (x = num of places)
+    //     },
 
-        fieldComponent: NumberControl,
-        configComponent: NumberConfigView,
+    //     fieldComponent: NumberControl,
+    //     configComponent: NumberConfigView,
 
-        /**
-         * As same like Vue-JS Property Default Data
-         * Specific field need some special data-type/structure, they need to
-         * put the creation in a factory method.
-         * It must return a value.
-         */
-        rendererDefaultData() {
-            return 0;
-        },
-    },
+    //     /**
+    //      * As same like Vue-JS Property Default Data
+    //      * Specific field need some special data-type/structure, they need to
+    //      * put the creation in a factory method.
+    //      * It must return a value.
+    //      */
+    //     rendererDefaultData() {
+    //         return 0;
+    //     },
+    // },
 
     text: {
         name: "Text Field",
@@ -206,29 +206,29 @@ const CONTROLS = {
         configComponent: LabelConfigView
     },
 
-    button: {
-        name: "Button",
-        description: "Simple button for your own purpose",
-        disableValidation: true,
-        disableValue: true,
+    // button: {
+    //     name: "Button",
+    //     description: "Simple button for your own purpose",
+    //     disableValidation: true,
+    //     disableValue: true,
 
-        configData: {
-            buttonClass: STYLES.BUTTON.PRIMARY,
-            buttonType: "button", // submit/reset/button/...
+    //     configData: {
+    //         buttonClass: STYLES.BUTTON.PRIMARY,
+    //         buttonType: "button", // submit/reset/button/...
 
-            emitEventCode: "", // like: "BtnClicked/clicked/change"
-            emitEventData: "", // special data to emit to let you know which button is clicked
+    //         emitEventCode: "", // like: "BtnClicked/clicked/change"
+    //         emitEventData: "", // special data to emit to let you know which button is clicked
 
-            // if this is true => validation will be run before the real invoke method
-            isRunValidation: false,
+    //         // if this is true => validation will be run before the real invoke method
+    //         isRunValidation: false,
 
-            // Override here in order to not show the Label
-            isShowLabel: false,
-        },
+    //         // Override here in order to not show the Label
+    //         isShowLabel: false,
+    //     },
 
-        fieldComponent: ButtonControl,
-        configComponent: ButtonConfigView
-    },
+    //     fieldComponent: ButtonControl,
+    //     configComponent: ButtonConfigView
+    // },
 
     emptyBlock: {
         name: "Empty Block",
