@@ -31,8 +31,7 @@
         </div>
 
         <div :class="styles.FORM.FORM_GROUP + ' input-configuration'">
-            <div>Field Required</div>
-            <input type="checkbox" value="true" v-model="required">
+            <div><input type="checkbox" value="true" v-model="required"> Field Required </div>
             <!-- <input type="text" :class="styles.FORM.FORM_CONTROL" v-model="control.defaultValue" placeholder="Default Value"> -->
         </div>
 
@@ -81,10 +80,8 @@
                 }
             }
         },
-        methods: {
-            // addNewRule() {
-            //     this.control.validations.push(new ValidationRule());
-            // },
+        mounted() {
+            this.required = this.control.validations.length ? true : false;
         }
     };
 </script>
