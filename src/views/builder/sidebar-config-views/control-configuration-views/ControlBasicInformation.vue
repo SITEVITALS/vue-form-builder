@@ -29,6 +29,14 @@
             <div>Default</div>
             <input type="text" :class="styles.FORM.FORM_CONTROL" v-model="control.defaultValue" placeholder="Default Value">
         </div>
+
+        <div :class="styles.FORM.FORM_GROUP + ' input-configuration'">
+            <div>Field Required</div>
+            <input type="checkbox" value="true" v-model="required">
+            <!-- <input type="text" :class="styles.FORM.FORM_CONTROL" v-model="control.defaultValue" placeholder="Default Value"> -->
+        </div>
+
+
         
         
         <!-- <div :class="styles.FORM.FORM_GROUP">
@@ -52,8 +60,33 @@
         components: {SidebarToggleableContainer},
         props: {
             control: Object
+        },
+        data: () => ({
+            required: false,
+        }),
+        watch: {
+            required(value) {
+                if (value) {
+                    let validations = [
+                        {
+                            additionalValue: "",
+                            errorMessage: "This field is required",
+                            ruleType: "required"
+                        }
+                    ];
+                    this.control.validations = validations
+
+                } else {
+                    this.control.validations = []
+                }
+            }
+        },
+        methods: {
+            // addNewRule() {
+            //     this.control.validations.push(new ValidationRule());
+            // },
         }
-    }
+    };
 </script>
 
 <style scoped>
