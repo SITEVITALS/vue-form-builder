@@ -43,7 +43,8 @@
              * Open the Right Sidebar
              */
             open(runnerId) {
-                if (this.isOpen) {
+                // if (this.isOpen) {
+                if (this.isOpen && this.component != null && this.runnerId != null) {
                     ALERT_DIALOG.show('Please close the current active sidebar before open another')
                     return
                 }
