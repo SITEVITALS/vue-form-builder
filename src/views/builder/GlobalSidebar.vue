@@ -30,6 +30,9 @@
                 default() {
                     return {}
                 }
+            },
+            sidebar: {
+                type: Boolean
             }
         },
         data: () => ({
@@ -38,14 +41,18 @@
             runnerId: null,
             isOpen: false,
         }),
+        watch: {
+            isOpen(value) {
+                this.$emit('update:sidebar', value)
+            }
+        },
         methods: {
             /**
              * Open the Right Sidebar
              */
             open(runnerId) {
-                // if (this.isOpen) {
-                if (this.isOpen && this.component != null && this.runnerId != null) {
-                    ALERT_DIALOG.show('Please close the current active sidebar before open another')
+                if (this.isOpen) {
+                    // ALERT_DIALOG.show('Please close the current active sidebar before open another')
                     return
                 }
 

@@ -1,6 +1,6 @@
 <template>
     <div class="section-container" :class="{'active': isDoingConfiguration}" ref="asd" :id="section.healine">
-        <SectionNavigationBar :section="section" @active="setActive" v-if="editable" />
+        <SectionNavigationBar :section="section" @active="setActive" v-if="editable" :sidebar="sidebar" />
 
         <component :is="sectionViewComponent"
                    :section.sync="section"
@@ -25,6 +25,7 @@
             rows: Object,
             controls: Object,
             editable: Boolean,
+            sidebar: Boolean
         },
         data: () => ({
             isDoingConfiguration: false

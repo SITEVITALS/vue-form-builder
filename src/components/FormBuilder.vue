@@ -18,12 +18,13 @@
                           :controls.sync="formData.controls"
                           :key="sectionData.uniqueId"
                           :editable="editable"
+                          :sidebar="sidebar"
         />
 
         <!-- below all -->
 
         <!-- global stuff -->
-        <GlobalSidebar :formData="formData" v-if="editable" />
+        <GlobalSidebar :formData="formData" v-if="editable" :sidebar.sync="sidebar" />
 
         <!-- <hr> -->
         <!-- <p class="copyright-text" v-text="copyrightText"></p> -->
@@ -55,6 +56,7 @@
         },
         mixins: FormBuilderBusiness,
         data: () => ({
+            sidebar: false,
             formData: {
                 formConfig: {},
                 sections: {},

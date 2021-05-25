@@ -36,6 +36,7 @@
     import {EVENT_CONSTANTS} from "@/configs/events";
     import SidebarRenderer from "@/libraries/sidebar-renderer.class";
     import SidebarSectionConfiguration from "@/views/builder/sidebar-config-views/SidebarSectionConfiguration";
+    import {ALERT_DIALOG} from "@/libraries/alert-dialog";
 
     export default {
         name: "SectionNavigationBar",
@@ -44,7 +45,8 @@
             section: {
                 type: Object,
                 required: true,
-            }
+            },
+            sidebar: Boolean
         },
         computed: {
             /**
@@ -60,6 +62,10 @@
              * Open the sidebar to add control yeah yeah
              */
             openAddControl() {
+                if (this.sidebar) {
+                    ALERT_DIALOG.show('Please close the current active sidebar before open another')
+                    return 
+                }
                 this.$formEvent.$emit(EVENT_CONSTANTS.BUILDER.SIDEBAR.OPEN, this.runnerId)
             },
 
